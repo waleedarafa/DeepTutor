@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "services": {
+    "llm": {
+      "active_profile_id": "llm-profile-default",
+      "active_model_id": "llm-model-default",
+      "profiles": [
+        {
+          "id": "llm-profile-default",
+          "name": "Claude Code (claude -p proxy)",
+          "binding": "openai",
+          "base_url": "http://127.0.0.1:8088/v1",
+          "api_key": "sk-local",
+          "api_version": "",
+          "extra_headers": {},
+          "models": [
+            { "id": "llm-model-default", "name": "claude-code", "model": "claude-code" }
+          ]
+        }
+      ]
+    },
+    "embedding": {
+      "active_profile_id": "embedding-profile-default",
+      "active_model_id": "embedding-model-default",
+      "profiles": [
+        {
+          "id": "embedding-profile-default",
+          "name": "Ollama nomic-embed-text",
+          "binding": "ollama",
+          "base_url": "http://localhost:11434/api/embed",
+          "api_key": "",
+          "api_version": "",
+          "extra_headers": {},
+          "models": [
+            {
+              "id": "embedding-model-default",
+              "name": "nomic-embed-text",
+              "model": "nomic-embed-text",
+              "dimension": "768",
+              "supported_dimensions": ""
+            }
+          ]
+        }
+      ]
+    },
+    "search": { "active_profile_id": null, "profiles": [] }
+  }
+}
